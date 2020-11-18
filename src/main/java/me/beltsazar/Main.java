@@ -21,7 +21,7 @@ public class Main extends ListenerAdapter {
     private static JDA bot;
 
     public static void main(String[] args) throws Exception {
-        bot = new JDABuilder(BotConfig.TOKEN).build();
+        bot = JDABuilder.createLight(BotConfig.TOKEN).build();
         initializeBot();
 
         bot.addEventListener(new GuildMemberEvent());
